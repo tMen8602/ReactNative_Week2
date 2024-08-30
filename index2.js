@@ -1,24 +1,13 @@
-var a = [1, 3, 5, 7]
+const numbers = [1, 2, 3, 4, 5];
 
+const sum = numbers.reduce((accumulator, currentValue) => {
+    const returns = accumulator + currentValue;
+    console.log(`Accumulator: ${accumulator}`);
+    console.log(`Current Value: ${currentValue}`);
+    console.log(`returns: ${returns}`);
+    console.log('----------------------------');
 
+    return returns;
+}, 0);
 
-
-const initialValue = 0;
-const sumWithInitial = a.reduce(
-
-    (accumulator, currentValue) => {
-        accumulator + currentValue, initialValue;
-
-
-        console.log('initialValue ' + initialValue);
-        console.log('currentValue ' + currentValue);
-        console.log('accumulator ' + accumulator);
-        console.log('---------------------------------');
-
-    }
-
-);
-
-
-console.log('sumWithInitial ' + sumWithInitial);
-// Expected output: 10
+console.log(`Total Sum: ${sum}`);
